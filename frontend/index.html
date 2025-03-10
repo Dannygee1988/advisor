@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pri0r1ty AI Chatbot Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    h1 {
+      color: #4a85e8;
+    }
+    .logo {
+      max-width: 150px;
+      margin-bottom: 20px;
+    }
+    .content {
+      margin-bottom: 40px;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+      color: #666;
+    }
+  </style>
+  <!-- Include the chatbot CSS -->
+  <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+  <header>
+    <img src="images/Pri0r1ty_PRIMARY-Logo_Colour-ICON-CMYK.png" alt="Pri0r1ty AI Logo" class="logo">
+    <h1>Pri0r1ty AI Chatbot</h1>
+    <p>A customizable AI chatbot solution for your website</p>
+  </header>
+
+  <div class="content">
+    <h2>About Our Chatbot</h2>
+    <p>This AI-powered chatbot provides instant assistance to your website visitors. It collects name and email information before starting a conversation, ensuring you can follow up with leads.</p>
+    
+    <h2>Features</h2>
+    <ul>
+      <li>Customizable design that matches your brand</li>
+      <li>GDPR-compliant data collection</li>
+      <li>Integration with leading LLM providers</li>
+      <li>Mobile-responsive interface</li>
+      <li>Easy to deploy and manage</li>
+    </ul>
+    
+    <h2>Try It Out</h2>
+    <p>Click the chat button in the bottom-right corner to start a conversation with our AI assistant.</p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Pri0r1ty AI. All rights reserved.</p>
+  </footer>
+
+  <!-- Chatbot Container (this is where the chatbot will appear) -->
+  <div id="chatbot-container">
+    <!-- Chat toggle button -->
+    <button id="chat-toggle">💬</button>
+    
+    <!-- Chat window -->
+    <div id="chat-window">
+      <!-- Chat header -->
+      <div id="chat-header">
+        <div id="header-content">
+          <div id="logo-container">
+            <img id="company-logo" src="images/Pri0r1ty_PRIMARY-Logo_Colour-ICON-CMYK.png" alt="Company Logo">
+          </div>
+          <div id="header-text">
+            <span id="header-title">Chat Support</span>
+            <span id="header-subtitle">How can we help you today?</span>
+          </div>
+          <button id="close-chat">✕</button>
+        </div>
+      </div>
+      
+      <!-- Chat messages area -->
+      <div id="chat-messages">
+        <!-- User info form (initially shown) -->
+        <div id="user-info-form">
+          <div class="form-group">
+            <label for="user-name">Name</label>
+            <input type="text" id="user-name" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label for="user-email">Email</label>
+            <input type="email" id="user-email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group consent-group">
+            <input type="checkbox" id="gdpr-consent" required>
+            <label for="gdpr-consent">I consent to the processing of my personal data in accordance with GDPR regulations for the purpose of this chat conversation.</label>
+          </div>
+          <button id="start-chat">Start Chat</button>
+        </div>
+      </div>
+      
+      <!-- Chat input area (initially hidden) -->
+      <div id="chat-input-area" style="display: none;">
+        <input type="text" id="chat-input" placeholder="Type your message...">
+        <button id="send-message">→</button>
+        <div id="trademark">Built by Pri0r1ty AI</div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Include the chatbot JavaScript -->
+  <script src="chatbot.js"></script>
+</body>
+</html>
