@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Widget</title>
+    <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+    <!-- Chatbot Widget -->
+    <div class="chatbot-widget">
+        <!-- Floating Chat Toggle Button -->
+        <button class="chat-toggle" id="chatToggle" onclick="toggleChat()">
+            <img class="logo-img" id="toggleIcon" src="https://res.cloudinary.com/deyzbqzya/image/upload/v1750009661/Blue_Pri0r1ty_Icon_fsmbrw.png" alt="Priority Logo">
+        </button>
+
+
+        <!-- Chat Container -->
+        <div class="chatbot-container" id="chatContainer">
+            <!-- GDPR Consent Form -->
+            <div class="gdpr-form" id="gdprForm">
+                <div class="form-header">
+                    <div class="bot-avatar">
+                        <img class="form-logo-img" src="https://res.cloudinary.com/deyzbqzya/image/upload/v1750009661/Blue_Pri0r1ty_Icon_fsmbrw.png" alt="Priority Logo">
+                    </div>
+                    <h2 class="form-title">Let's Get Started!</h2>
+                    <p class="form-subtitle">What's your Pri0r1ty?</p>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="form-label" for="userName">Your Name</label>
+                    <input type="text" id="userName" class="form-input" placeholder="Enter your full name" required>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="form-label" for="userEmail">Email Address</label>
+                    <input type="email" id="userEmail" class="form-input" placeholder="your@email.com" required>
+                </div>
+
+
+                <div class="gdpr-consent">
+                    <div class="consent-checkbox">
+                        <input type="checkbox" id="gdprConsent" class="checkbox-input" required>
+                        <label for="gdprConsent" class="consent-text">
+                            I agree to the processing of my personal data in accordance with the
+                            <strong>Privacy Policy</strong> and consent to receive communications.
+                            You can withdraw consent at any time.
+                        </label>
+                    </div>
+                </div>
+
+
+                <button class="start-chat-btn" id="startChatBtn" onclick="startChat()">
+                    Let's talk ✨
+                </button>
+            </div>
+
+
+            <!-- Chat Interface -->
+            <div class="chat-interface" id="chatInterface">
+                <div class="chat-header">
+                    <div class="chat-header-content">
+                        <div class="header-avatar">
+                            <img class="header-logo-img" src="https://res.cloudinary.com/deyzbqzya/image/upload/v1750009661/Blue_Pri0r1ty_Icon_fsmbrw.png" alt="Priority Logo">
+                        </div>
+                        <div class="header-info">
+                            <h3>AI Assistant</h3>
+                            <div class="status-indicator">
+                                <div class="status-dot"></div>
+                                <span>Online</span>
+                            </div>
+                        </div>
+                        <div class="header-actions">
+                            <button class="header-btn" title="Minimize" onclick="toggleChat()">−</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="chat-messages" id="chatMessages">
+                    <div class="welcome-message">
+                        <h4>👋 Welcome!</h4>
+                        <p>I'm here to help you with any questions you might have. How can I assist you today?</p>
+                        <div class="quick-actions">
+                            <button class="quick-action-btn" onclick="sendQuickMessage('How can I track my order?')">Track Order 📦</button>
+                            <button class="quick-action-btn" onclick="sendQuickMessage('I need support')">Get Support 🆘</button>
+                            <button class="quick-action-btn" onclick="sendQuickMessage('Tell me about your products')">Our Products 🛍️</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="chat-input-container">
+                    <div class="chat-input-wrapper">
+                        <button class="attachment-btn" title="Attach file">📎</button>
+                        <textarea class="chat-input" placeholder="Type your message..." rows="1" id="chatInput" onkeypress="handleKeyPress(event)"></textarea>
+                        <button class="send-btn" onclick="sendMessage()" title="Send message">➤</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="chatbot.js"></script>
+</body>
+</html>
